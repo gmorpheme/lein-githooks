@@ -42,6 +42,10 @@ Do not use lein-githooks if:
 
 ### Adding lein-githooks to your project
 
+Current dependency information:
+
+    [lein-githooks "0.1.0"]
+
 `lein-githooks` is all about distributing git hooks for your project so
 you probably want to install it at project level rather than in your
 `profiles.clj` file. Add the plugin dependency and the commands you
@@ -52,7 +56,7 @@ would like to run in each git hook as follows.
 
   ;; ...
 
-  :profiles {:dev {:plugins [[lein-githooks "0.1.0-SNAPSHOT"]]
+  :profiles {:dev {:plugins [[lein-githooks "0.1.0"]]
                    :githooks {:auto-install true
                               :pre-push ["lein test"]
                               :pre-commit ["lein eastwood"]
