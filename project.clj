@@ -1,4 +1,4 @@
-(defproject lein-githooks "0.1.0"
+(defproject lein-githooks "0.1.1-SNAPSHOT"
   :description "Leiningen plugin for managing git client hooks"
   :url "http://github.com/gmorpheme/lein-githooks"
   :license {:name "Eclipse Public License"
@@ -7,4 +7,6 @@
 
   :signing {:gpg-key "github@gmorpheme.net"}
   
-  :profiles {:dev {:githooks {:pre-push ["lein test"]}}})
+  :profiles {:dev {:plugins [[lein-githooks "0.1.0"]]
+                   :githooks {:auto-install true
+                              :pre-push ["lein test"]}}})
