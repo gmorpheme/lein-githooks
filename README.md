@@ -105,7 +105,7 @@ You can simply override the setting in your leiningen `profiles.clj`
 and hook installation will be manual for all your projects.
 
 ```clojure
-{:dev {:githooks {:auto-install false}}}
+{:user {:githooks ^:replace {:auto-install false}}
 ```
 
 ## Thanks
