@@ -1,4 +1,4 @@
-(defproject lein-githooks "0.1.1-SNAPSHOT"
+(defproject lein-githooks "0.1.1"
   :description "Leiningen plugin for managing git client hooks"
   :url "http://github.com/gmorpheme/lein-githooks"
   :license {:name "Eclipse Public License"
