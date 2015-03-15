@@ -1,6 +1,5 @@
 machine:
   pre:
-    - mkdir ~/.lein
     - echo "{:auth {:repository-auth {#\"clojars\" {:username :env/CLOJARS_USERNAME :password :env/CLOJARS_PASSWORD}}}}" > ~/.lein/profiles.clj
 
 test:
