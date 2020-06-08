@@ -132,7 +132,7 @@ lein githooks run %s
   (let [cmds (get-in project [:githooks hook])]
     (loop [[cmd & cmds] cmds]
       (when (seq cmd)
-        (let [exit-code (apply sh (string/split cmd #"\W+"))]
+        (let [exit-code (apply sh (string/split cmd #"\s+"))]
           (if (zero? exit-code)
             (recur cmds)
             (abort hook "hook failed.")))))))
